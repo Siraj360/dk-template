@@ -12,7 +12,7 @@ const BRAND = `// src/app/app.config.ts
 provideDashkit({
   themes: APP_THEMES,
   storageKey: 'dk-template.settings',                 // where the choices of the Settings page are saved
-  brand: { short: 'My App', name: 'My App Ltd', icon: 'widgets' },
+  brand: { short: 'DkTemplate', name: 'Angular + Material Starter Kit', icon: 'widgets' },
 })
 // short = text next to the logo   name = full name (footer)   icon = any Material Symbols name`;
 const THEMES = `// 1) src/styles.scss: one block per theme, with a Material palette

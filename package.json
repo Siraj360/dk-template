@@ -2,11 +2,20 @@
   "name": "dk-template",
   "version": "0.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siraj360/dk-template.git"
+  },
+  "homepage": "https://siraj360.github.io/dk-template/",
+  "bugs": {
+    "url": "https://github.com/Siraj360/dk-template/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "build:pages": "ng build --base-href /dk-template/"
   },
   "dependencies": {
     "@angular/cdk": "^22.2.0",

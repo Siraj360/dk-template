@@ -10,6 +10,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideHttpClient(),                                   // the menu is loaded from public/menu.json
     provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
-    provideDashkit({ themes: APP_THEMES, storageKey: 'dk-template.settings', brand: { short: 'My App', name: 'My App', icon: 'widgets' } }),
+    provideDashkit({ themes: APP_THEMES, storageKey: 'dk-template.settings', brand: { short: 'DkTemplate', name: 'Angular + Material Starter Kit', icon: 'widgets' } }),
   ],
 };

@@ -1,8 +1,16 @@
-<dk-hero-banner class="mb-4" title="Welcome to My App" subtitle="A starter web template built with DashKIT components: layout, menu, themes. Change it to make it yours.">
+<dk-hero-banner class="mb-4" title="Welcome to DkTemplate" subtitle="A starter web template built with DashKIT components: layout, menu, themes. Change it to make it yours.">
   <span hero-media class="bg-body rounded-4 p-3 shadow-sm"><dk-logo [height]="52" /></span>
   <a mat-flat-button routerLink="/docs"><mat-icon>menu_book</mat-icon> Read the documents</a>
   <a mat-stroked-button routerLink="/settings"><mat-icon>settings</mat-icon> Settings</a>
+  <a mat-stroked-button href="https://github.com/Siraj360/dk-template" target="_blank" rel="noopener" aria-label="Source code on GitHub"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true" style="margin-right: 8px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+  <a mat-stroked-button href="https://www.npmjs.com/package/ngx-dashkit-light" target="_blank" rel="noopener"><mat-icon>inventory_2</mat-icon> npm</a>
 </dk-hero-banner>
+
+<div class="row g-3 mb-4">
+  <div class="col-12 col-md-4"><dk-panel panelClass="dk-bg-secondary-container" title="Ready-made layout" subtitle="Menu, header, footer" icon="view_quilt"><p>A menu from one JSON file: side, top, or a bottom bar on a phone. A theme switch is included.</p><a mat-stroked-button routerLink="/docs">Read more</a></dk-panel></div>
+  <div class="col-12 col-md-4"><dk-panel panelClass="dk-bg-secondary-container"  title="4 themes" subtitle="2 light + 2 dark" icon="palette"><p>Change them in Settings. A theme can be exported as a JSON file and imported again.</p><a mat-stroked-button routerLink="/settings">Open Settings</a></dk-panel></div>
+  <div class="col-12 col-md-4"><dk-panel panelClass="dk-bg-secondary-container" title="Small and free" subtitle="MIT license" icon="bolt"><p>Angular Material and Bootstrap only. No chart library and no service worker, so the bundle stays small.</p><a mat-stroked-button routerLink="/docs">Read more</a></dk-panel></div>
+</div>
 
 <dk-panel title="How to start" subtitle="Five small steps" icon="rocket_launch">
   <ol class="mb-3">
@@ -10,7 +18,33 @@
     <li><b>Change the name:</b> the <code>brand</code> option in <code>src/app/app.config.ts</code>.</li>
     <li><b>Edit the menu:</b> <code>public/menu.json</code> (text, icon, route, children).</li>
     <li><b>Add a page:</b> a component in <code>src/app/pages</code>, a route in <code>app.routes.ts</code>, a line in the menu.</li>
-    <li><b>Publish it:</b> <code>npm run build</code> and upload the <code>dist</code> folder.</li>
+    <li><b>Publish it:</b> <code>npm run build</code> and upload the <code>dist</code> folder, or push to GitHub (see the box below).</li>
   </ol>
   <a mat-stroked-button routerLink="/docs"><mat-icon>arrow_forward</mat-icon> Read more in the Documents page</a>
 </dk-panel>
+
+<div class="row g-3 mt-1">
+  <div class="col-12 col-lg-6">
+    <dk-panel title="UI package on npm" subtitle="Where the components come from" icon="inventory_2">
+      @for (p of packages; track p.name) {
+        <div class="mb-3">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <b>{{ p.name }}</b><span class="badge rounded-pill dk-bg-primary fw-normal">installed v{{ info.version }}</span>
+            @if (p.url) { <a [href]="p.url" target="_blank" rel="noopener"><u>View on npm</u></a> } @else { <span class="small text-body-secondary">{{ p.note }}</span> }
+          </div>
+          <pre class="small mt-1 mb-0"><code>{{ p.cmd }}</code></pre>
+        </div>
+      }
+      <p class="small text-body-secondary mb-0">{{ info.edition === 'light' ? 'Light edition: the free parts only.' : 'Full edition: the free and the pro parts.' }}</p>
+    </dk-panel>
+  </div>
+  <div class="col-12 col-lg-6">
+    <dk-panel title="Source and live site" subtitle="GitHub" icon="public">
+      <div class="d-flex flex-column gap-2">
+        <a [href]="repoUrl" target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true" style="flex: none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><u class="text-break">{{ repoUrl }}</u></a>
+        <a [href]="siteUrl" target="_blank" rel="noopener" class="d-inline-flex align-items-center gap-2"><mat-icon>language</mat-icon><u class="text-break">{{ siteUrl }}</u></a>
+      </div>
+      <p class="small text-body-secondary mt-3 mb-0">GitHub Actions builds and publishes this site on every push to the main branch (see <code>.github/workflows/deploy.yml</code>).</p>
+    </dk-panel>
+  </div>
+</div>

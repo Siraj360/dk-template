@@ -9,3 +9,12 @@ html.theme-light-a { @include mat.theme((color: (theme-type: light, primary: mat
 html.theme-light-b { @include mat.theme((color: (theme-type: light, primary: mat.$green-palette, tertiary: mat.$cyan-palette))); }
 html.theme-dark-a { @include mat.theme((color: (theme-type: dark, primary: mat.$azure-palette, tertiary: mat.$blue-palette))); }
 html.theme-dark-b { @include mat.theme((color: (theme-type: dark, primary: mat.$violet-palette, tertiary: mat.$rose-palette))); }
+
+/* Automatically adds a space before and after any <code> tag */
+code:not(:empty):before {
+  content: " ";
+}
+
+code:not(:empty):after {
+  content: " ";
+}
