@@ -2,6 +2,8 @@
 
 A web template made with **DashKIT** components (Angular 22, standalone components, no NgModules).
 
+## [https://siraj360.github.io/dk-template/](https://siraj360.github.io/dk-template/)
+
 ## Run it
     npm install
     npm start                # http://localhost:4200
