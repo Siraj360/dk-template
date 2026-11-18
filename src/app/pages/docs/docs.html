@@ -1,0 +1,23 @@
+<dk-page-title />
+<p class="text-body-secondary">The short documentation of this template: the menu, the brand, the themes, the settings. Everything comes from <code>ngx-dashkit/light</code>.</p>
+
+<div class="row g-3">
+  <div class="col-12 col-xl-6">
+    <dk-panel title="1. The menu" subtitle="A JSON file: public/menu.json" icon="menu">
+      <pre class="small mb-3"><code>{{ code.MENU }}</code></pre>
+      <div class="table-responsive"><table class="table table-sm mb-0"><thead><tr><th>Field</th><th>Type</th><th>Meaning</th></tr></thead>
+        <tbody>@for (r of menuFields; track r[0]) { <tr><td><code>{{ r[0] }}</code></td><td><code>{{ r[1] }}</code></td><td>{{ r[2] }}</td></tr> }</tbody></table></div>
+      <p class="small text-body-secondary mt-2 mb-0">On a phone the menu is a bottom bar with 5 slots. With more than 5 items you get 4 + a More button.</p>
+    </dk-panel>
+  </div>
+  <div class="col-12 col-xl-6">
+    <dk-panel title="2. The brand" subtitle="Name, logo text and icon" icon="badge">
+      <pre class="small mb-3"><code>{{ code.BRAND }}</code></pre>
+      <div class="table-responsive"><table class="table table-sm mb-0"><thead><tr><th>Option</th><th>Type</th><th>Meaning</th></tr></thead>
+        <tbody>@for (r of configFields; track r[0]) { <tr><td><code>{{ r[0] }}</code></td><td><code>{{ r[1] }}</code></td><td>{{ r[2] }}</td></tr> }</tbody></table></div>
+    </dk-panel>
+  </div>
+  <div class="col-12 col-xl-6"><dk-panel title="3. The themes" subtitle="2 light + 2 dark" icon="palette"><pre class="small mb-0"><code>{{ code.THEMES }}</code></pre></dk-panel></div>
+  <div class="col-12 col-xl-6"><dk-panel title="4. The settings" subtitle="SettingsService: what the Settings page changes" icon="settings"><pre class="small mb-0"><code>{{ code.SETTINGS }}</code></pre></dk-panel></div>
+  <div class="col-12 col-xl-6"><dk-panel title="Add a page" subtitle="Three small steps" icon="note_add"><pre class="small mb-0"><code>{{ code.PAGE }}</code></pre></dk-panel></div>
+</div>

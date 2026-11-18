@@ -1,0 +1,16 @@
+<dk-hero-banner class="mb-4" title="Welcome to My App" subtitle="A starter web template built with DashKIT components: layout, menu, themes. Change it to make it yours.">
+  <span hero-media class="bg-body rounded-4 p-3 shadow-sm"><dk-logo [height]="52" /></span>
+  <a mat-flat-button routerLink="/docs"><mat-icon>menu_book</mat-icon> Read the documents</a>
+  <a mat-stroked-button routerLink="/settings"><mat-icon>settings</mat-icon> Settings</a>
+</dk-hero-banner>
+
+<dk-panel title="How to start" subtitle="Five small steps" icon="rocket_launch">
+  <ol class="mb-3">
+    <li><b>Run it:</b> <code>npm install</code> then <code>npm start</code>.</li>
+    <li><b>Change the name:</b> the <code>brand</code> option in <code>src/app/app.config.ts</code>.</li>
+    <li><b>Edit the menu:</b> <code>public/menu.json</code> (text, icon, route, children).</li>
+    <li><b>Add a page:</b> a component in <code>src/app/pages</code>, a route in <code>app.routes.ts</code>, a line in the menu.</li>
+    <li><b>Publish it:</b> <code>npm run build</code> and upload the <code>dist</code> folder.</li>
+  </ol>
+  <a mat-stroked-button routerLink="/docs"><mat-icon>arrow_forward</mat-icon> Read more in the Documents page</a>
+</dk-panel>

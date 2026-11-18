@@ -1,0 +1,15 @@
+<dk-page-title />
+<div class="row g-3">
+  <div class="col-12 col-lg-8"><dk-panel title="Theme" [subtitle]="s.themes.length + ' themes: 2 light and 2 dark. Saved in this browser.'" icon="palette"><dk-theme-picker /></dk-panel></div>
+  <div class="col-12 col-lg-8"><dk-panel title="Menu position" subtitle="Auto = side menu on large screens, bottom bar on phones" icon="view_sidebar"><dk-metric-toggle [options]="positions()" [value]="s.menuPosition()" (valueChange)="setPosition($event)" /></dk-panel></div>
+  <div class="col-12 col-lg-8">
+    <dk-panel title="Header and footer" subtitle="Sticky = stays visible while you scroll" icon="web_asset">
+      <div class="row g-2">
+        <div class="col-12 col-sm-6 d-flex flex-column gap-2"><mat-slide-toggle [checked]="s.showHeader()" (change)="s.showHeader.set($event.checked)">Show header</mat-slide-toggle><mat-slide-toggle [checked]="s.stickyHeader()" [disabled]="!s.showHeader()" (change)="s.stickyHeader.set($event.checked)">Sticky header</mat-slide-toggle></div>
+        <div class="col-12 col-sm-6 d-flex flex-column gap-2"><mat-slide-toggle [checked]="s.showFooter()" (change)="s.showFooter.set($event.checked)">Show footer</mat-slide-toggle><mat-slide-toggle [checked]="s.stickyFooter()" [disabled]="!s.showFooter()" (change)="s.stickyFooter.set($event.checked)">Sticky footer</mat-slide-toggle></div>
+      </div>
+    </dk-panel>
+  </div>
+  <div class="col-12 small text-body-secondary">UI package: <b>ngx-dashkit/light</b> (free parts only: no ECharts, no service worker)</div>
+  <div class="col-12"><button mat-stroked-button (click)="s.reset()"><mat-icon>restart_alt</mat-icon> Reset to defaults</button></div>
+</div>

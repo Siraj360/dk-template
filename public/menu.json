@@ -1,0 +1,43 @@
+[
+  {
+    "text": "Home",
+    "icon": "home",
+    "route": "home"
+  },
+  {
+    "text": "Projects",
+    "icon": "folder",
+    "route": "projects"
+  },
+  {
+    "text": "More",
+    "icon": "apps",
+    "children": [
+      {
+        "text": "Team",
+        "icon": "groups",
+        "route": "more/team"
+      },
+      {
+        "text": "Billing",
+        "icon": "receipt_long",
+        "route": "more/billing"
+      },
+      {
+        "text": "Help center",
+        "icon": "help",
+        "route": "more/help"
+      }
+    ]
+  },
+  {
+    "text": "Documents",
+    "icon": "menu_book",
+    "route": "docs"
+  },
+  {
+    "text": "Settings",
+    "icon": "settings",
+    "route": "settings"
+  }
+]
