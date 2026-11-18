@@ -7,6 +7,8 @@
 - Repository: https://github.com/Siraj360/dk-template
 - UI package on npm: https://www.npmjs.com/package/ngx-dashkit-light
 
+### [Live GitHub Pages - https://siraj360.github.io/dk-template/](https://siraj360.github.io/dk-template/)
+
 ## Run it
     npm install
     npm start                # http://localhost:4200
