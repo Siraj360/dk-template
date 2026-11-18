@@ -27,14 +27,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Angular app
         run: |
           npx ng build --configuration production --base-href "/dk-template/"
           if [ -d "dist/dk-template/browser" ]; then
             cp dist/dk-template/browser/index.html dist/dk-template/browser/404.html
-            echo "dist/dk-template/browser" >> $GITHUB_OUTPUT
           else
             cp dist/dk-template/index.html dist/dk-template/404.html
           fi
