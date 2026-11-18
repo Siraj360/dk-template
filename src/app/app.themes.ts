@@ -1,4 +1,4 @@
-import type { ThemeOption } from 'ngx-dashkit/light';
+import type { ThemeOption } from 'ngx-dashkit-light';
 
 /**
  * THE 4 THEMES of this template: 2 light + 2 dark. Each id must match a class in src/styles.scss (html.theme-<id>).

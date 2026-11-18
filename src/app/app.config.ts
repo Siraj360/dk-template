@@ -1,7 +1,7 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
-import { provideDashkit } from 'ngx-dashkit/light';
+import { provideDashkit } from 'ngx-dashkit-light';
 import { APP_THEMES } from './app.themes';
 import { routes } from './app.routes';
 

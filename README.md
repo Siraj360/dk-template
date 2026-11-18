@@ -9,7 +9,7 @@ A web template made with **DashKIT** components (Angular 22, standalone componen
 
 The UI package is **ngx-dashkit**. If it is not on npm yet, install it from the file you built:  npm install ../ngx-dashkit-<version>.tgz
 
-The code imports only the free parts, from 'ngx-dashkit/light'. That needs no ECharts, no service worker and no PWA files.
+The code imports only the free parts, from 'ngx-dashkit-light'. That needs no ECharts, no service worker and no PWA files.
 
 ## What is inside
 | File | What it does |

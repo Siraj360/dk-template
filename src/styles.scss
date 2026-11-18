@@ -1,6 +1,6 @@
 /* Global styles: Material themes (a class on <html>) + the DashKIT bridge. Bootstrap's CSS is loaded in angular.json. */
 @use '@angular/material' as mat;
-@use 'ngx-dashkit/styles/dashkit';
+@use 'ngx-dashkit-light/styles/dashkit';
 
 /* base theme + typography (the first light theme) */
 html { height: 100%; @include mat.theme((color: (theme-type: light, primary: mat.$azure-palette, tertiary: mat.$blue-palette), typography: Roboto, density: 0)); }

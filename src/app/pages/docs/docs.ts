@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageTitle, Panel } from 'ngx-dashkit/light';
+import { PageTitle, Panel } from 'ngx-dashkit-light';
 
 const MENU = `// public/menu.json: an array. Order = order in the menu.
 [

@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { LayoutService, MenuPosition, MetricOption, MetricToggle, PageTitle, Panel, SettingsService, ThemePicker } from 'ngx-dashkit/light';
+import { LayoutService, MenuPosition, MetricOption, MetricToggle, PageTitle, Panel, SettingsService, ThemePicker } from 'ngx-dashkit-light';
 
 @Component({ selector: 'app-settings', imports: [PageTitle, Panel, ThemePicker, MetricToggle, MatButtonModule, MatIconModule, MatSlideToggleModule], templateUrl: './settings.html' })
 export class Settings {
