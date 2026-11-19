@@ -8,25 +8,11 @@
 - UI package on npm: https://www.npmjs.com/package/ngx-dashkit-light
 
 
-
 ## Run it
     npm install
     npm start                # http://localhost:4200
     npm run build            # production build
 
-The UI package is **ngx-dashkit-light**. When it is on npm, `npm install` fetches it. Until then build the file in the DashKIT repository (`npm run pack:lib`, the files appear in `dist/packages`) and install it from there:
-    npm install <path>/dist/packages/ngx-dashkit-light-<version>.tgz
-
-The code imports only the free parts, from 'ngx-dashkit-light'. That needs no ECharts, no service worker and no PWA files.
-
-## Show it on GitHub Pages
-The site can live at https://<user>.github.io/<repository>/ , built by GitHub itself:
-1. Create a GitHub repository and push this project to the **main** branch.
-2. Repository, Settings, Pages, **Source: GitHub Actions**.
-3. Every push to main runs `.github/workflows/deploy.yml`: it builds the site with the right base href, adds a 404.html (so a refresh on /docs works) and publishes it.
-
-Try the same build on your computer:  `npm run build:pages`  then  `npx http-server -p 8080 dist/dk-template/browser`  (if your repository has another name, change it in the `build:pages` script).
-The workflow runs `npm install`, so the UI package must be on npm. If it is not yet, copy the `.tgz` file(s) into a `vendor` folder, commit them and set the dependency to `file:vendor/<file>.tgz`.
 
 ## What is inside
 | File | What it does |
